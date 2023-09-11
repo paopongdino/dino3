@@ -33,10 +33,10 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet-search.js"></script>
-        <script src="data/_1.js"></script>
-        <script src="data/_2.js"></script>
-        <script src="data/_3.js"></script>
-        <script src="data/_4.js"></script>
+        <script src="data/province_1.js"></script>
+        <script src="data/highway_2.js"></script>
+        <script src="data/Sourcesofancientlandforms_3.js"></script>
+        <script src="data/Landformtouristattractions_4.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -54,8 +54,8 @@
             }
         }
         var map = L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[13.947651876366784,97.3108169008586],[18.34211018982692,109.04359395135894]]);
+            zoomControl:true, maxZoom:22, minZoom:1
+        }).fitBounds([[13.946563886843204,97.0683709972836],[18.340930457914258,109.28603985493353]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -70,13 +70,13 @@
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
-            maxZoom: 28,
+            maxZoom: 22,
             minNativeZoom: 0,
             maxNativeZoom: 18
         });
         layer_GoogleMaps_0;
         map.addLayer(layer_GoogleMaps_0);
-        function pop__1(feature, layer) {
+        function pop_province_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -106,34 +106,34 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style__1_0() {
+        function style_province_1_0() {
             return {
-                pane: 'pane__1',
+                pane: 'pane_province_1',
                 opacity: 1,
-                color: 'rgba(19,22,225,1.0)',
+                color: 'rgba(53,121,177,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 4.0, 
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
                 fillOpacity: 0,
                 interactive: true,
             }
         }
-        map.createPane('pane__1');
-        map.getPane('pane__1').style.zIndex = 401;
-        map.getPane('pane__1').style['mix-blend-mode'] = 'normal';
-        var layer__1 = new L.geoJson(json__1, {
+        map.createPane('pane_province_1');
+        map.getPane('pane_province_1').style.zIndex = 401;
+        map.getPane('pane_province_1').style['mix-blend-mode'] = 'normal';
+        var layer_province_1 = new L.geoJson(json_province_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__1',
-            layerName: 'layer__1',
-            pane: 'pane__1',
-            onEachFeature: pop__1,
-            style: style__1_0,
+            dataVar: 'json_province_1',
+            layerName: 'layer_province_1',
+            pane: 'pane_province_1',
+            onEachFeature: pop_province_1,
+            style: style_province_1_0,
         });
-        bounds_group.addLayer(layer__1);
-        map.addLayer(layer__1);
-        function pop__2(feature, layer) {
+        bounds_group.addLayer(layer_province_1);
+        map.addLayer(layer_province_1);
+        function pop_highway_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -155,34 +155,34 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style__2_0() {
+        function style_highway_2_0() {
             return {
-                pane: 'pane__2',
+                pane: 'pane_highway_2',
                 opacity: 1,
-                color: 'rgba(219,30,42,1.0)',
+                color: 'rgba(196,60,57,1.0)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 2.0,
+                weight: 1.0,
                 fillOpacity: 0,
                 interactive: true,
             }
         }
-        map.createPane('pane__2');
-        map.getPane('pane__2').style.zIndex = 402;
-        map.getPane('pane__2').style['mix-blend-mode'] = 'normal';
-        var layer__2 = new L.geoJson(json__2, {
+        map.createPane('pane_highway_2');
+        map.getPane('pane_highway_2').style.zIndex = 402;
+        map.getPane('pane_highway_2').style['mix-blend-mode'] = 'normal';
+        var layer_highway_2 = new L.geoJson(json_highway_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__2',
-            layerName: 'layer__2',
-            pane: 'pane__2',
-            onEachFeature: pop__2,
-            style: style__2_0,
+            dataVar: 'json_highway_2',
+            layerName: 'layer_highway_2',
+            pane: 'pane_highway_2',
+            onEachFeature: pop_highway_2,
+            style: style_highway_2_0,
         });
-        bounds_group.addLayer(layer__2);
-        map.addLayer(layer__2);
-        function pop__3(feature, layer) {
+        bounds_group.addLayer(layer_highway_2);
+        map.addLayer(layer_highway_2);
+        function pop_Sourcesofancientlandforms_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -212,9 +212,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style__3_0() {
+        function style_Sourcesofancientlandforms_3_0() {
             return {
-                pane: 'pane__3',
+                pane: 'pane_Sourcesofancientlandforms_3',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(179,92,21,1.0)',
@@ -228,27 +228,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane__3');
-        map.getPane('pane__3').style.zIndex = 403;
-        map.getPane('pane__3').style['mix-blend-mode'] = 'normal';
-        var layer__3 = new L.geoJson(json__3, {
+        map.createPane('pane_Sourcesofancientlandforms_3');
+        map.getPane('pane_Sourcesofancientlandforms_3').style.zIndex = 403;
+        map.getPane('pane_Sourcesofancientlandforms_3').style['mix-blend-mode'] = 'normal';
+        var layer_Sourcesofancientlandforms_3 = new L.geoJson(json_Sourcesofancientlandforms_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__3',
-            layerName: 'layer__3',
-            pane: 'pane__3',
-            onEachFeature: pop__3,
+            dataVar: 'json_Sourcesofancientlandforms_3',
+            layerName: 'layer_Sourcesofancientlandforms_3',
+            pane: 'pane_Sourcesofancientlandforms_3',
+            onEachFeature: pop_Sourcesofancientlandforms_3,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style__3_0(feature));
+                return L.circleMarker(latlng, style_Sourcesofancientlandforms_3_0(feature));
             },
         });
-        bounds_group.addLayer(layer__3);
-        map.addLayer(layer__3);
-        function pop__4(feature, layer) {
+        bounds_group.addLayer(layer_Sourcesofancientlandforms_3);
+        map.addLayer(layer_Sourcesofancientlandforms_3);
+        function pop_Landformtouristattractions_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -286,48 +286,48 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style__4_0() {
+        function style_Landformtouristattractions_4_0() {
             return {
-                pane: 'pane__4',
+                pane: 'pane_Landformtouristattractions_4',
                 shape: 'diamond',
                 radius: 8.8,
                 opacity: 1,
-                color: 'rgba(61,128,53,1.0)',
+                color: 'rgba(128,17,25,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(84,176,74,1.0)',
+                fillColor: 'rgba(219,30,42,1.0)',
                 interactive: true,
             }
         }
-        map.createPane('pane__4');
-        map.getPane('pane__4').style.zIndex = 404;
-        map.getPane('pane__4').style['mix-blend-mode'] = 'normal';
-        var layer__4 = new L.geoJson(json__4, {
+        map.createPane('pane_Landformtouristattractions_4');
+        map.getPane('pane_Landformtouristattractions_4').style.zIndex = 404;
+        map.getPane('pane_Landformtouristattractions_4').style['mix-blend-mode'] = 'normal';
+        var layer_Landformtouristattractions_4 = new L.geoJson(json_Landformtouristattractions_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__4',
-            layerName: 'layer__4',
-            pane: 'pane__4',
-            onEachFeature: pop__4,
+            dataVar: 'json_Landformtouristattractions_4',
+            layerName: 'layer_Landformtouristattractions_4',
+            pane: 'pane_Landformtouristattractions_4',
+            onEachFeature: pop_Landformtouristattractions_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.shapeMarker(latlng, style__4_0(feature));
+                return L.shapeMarker(latlng, style_Landformtouristattractions_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer__4);
-        map.addLayer(layer__4);
+        bounds_group.addLayer(layer_Landformtouristattractions_4);
+        map.addLayer(layer_Landformtouristattractions_4);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/_4.png" /> แหล่งท่องเที่ยวประเภทธรณีสัณฐาน': layer__4,'<img src="legend/_3.png" /> แหล่งธรณีสัณฐานประเภทดึกดำบรรพ์': layer__3,'<img src="legend/_2.png" /> ทางหลวงแผ่นดิน': layer__2,'<img src="legend/_1.png" /> พื้นที่ศึกษา': layer__1,"Google Maps": layer_GoogleMaps_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Landformtouristattractions_4.png" /> Landform tourist attractions': layer_Landformtouristattractions_4,'<img src="legend/Sourcesofancientlandforms_3.png" /> Sources of ancient landforms': layer_Sourcesofancientlandforms_3,'<img src="legend/highway_2.png" /> highway': layer_highway_2,'<img src="legend/province_1.png" /> province': layer_province_1,"Google Maps": layer_GoogleMaps_0,}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
-            layer: layer__3,
+            layer: layer_Sourcesofancientlandforms_3,
             initial: false,
             hideMarkerOnCollapse: true,
             propertyName: 'name'}));
